@@ -1,9 +1,6 @@
 
 <?php
 
-/**
- * Theme setup.
- */
 function rankora_setup(): void
 {
     add_theme_support('title-tag');
@@ -19,51 +16,60 @@ function rankora_setup(): void
     ]);
 
     register_nav_menus([
-        'primary' => __('Primary Menu', 'rankora'),
-        'footer'  => __('Footer Menu', 'rankora'),
+        'primary' => __('Головна навігація', 'rankora'),
+        'footer'  => __('Меню футера', 'rankora'),
     ]);
 }
 add_action('after_setup_theme', 'rankora_setup');
 
 
-/**
- * Enqueue styles and scripts.
- */
 function rankora_enqueue_assets(): void
 {
     $theme_dir = get_template_directory();
     $theme_uri = get_template_directory_uri();
 
-    // CSS files.
+    // Google Fonts: Manrope
+    wp_enqueue_style(
+        'rankora-fonts',
+        'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap',
+        [],
+        null
+    );
+
+    // Stylesheets with automatic cache busting.
     $styles = [
         'rankora-main'       => '/assets/css/main.css',
         'rankora-components' => '/assets/css/components.css',
         'rankora-responsive' => '/assets/css/responsive.css',
     ];
 
-    foreach ($styles as $handle => $relative_path) {
-        $file_path = $theme_dir . $relative_path;
+    $dependencies = [];
 
-        if (file_exists($file_path)) {
+    foreach ($styles as $handle => $path) {
+        $file = $theme_dir . $path;
+
+        if (file_exists($file)) {
             wp_enqueue_style(
                 $handle,
-                $theme_uri . $relative_path,
-                [],
-                (string) filemtime($file_path)
+                $theme_uri . $path,
+                $dependencies,
+                (string) filemtime($file)
             );
+
+            $dependencies[] = $handle;
         }
     }
 
-    // JavaScript.
-    $script_path = '/assets/js/main.js';
-    $script_file = $theme_dir . $script_path;
+    // Main JavaScript.
+    $js_path = '/assets/js/main.js';
+    $js_file = $theme_dir . $js_path;
 
-    if (file_exists($script_file)) {
+    if (file_exists($js_file)) {
         wp_enqueue_script(
             'rankora-main',
-            $theme_uri . $script_path,
+            $theme_uri . $js_path,
             [],
-            (string) filemtime($script_file),
+            (string) filemtime($js_file),
             true
         );
     }
