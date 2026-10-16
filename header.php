@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rankora — SEO-агенція: органічне зростання для бізнесу</title>
+<meta name="description" content="SEO-аудит, технічне SEO та комплексне просування. Збільшуємо органічний трафік і заявки з пошуку. Прозора аналітика та вимірювані результати.">
+<meta property="og:title" content="Rankora — SEO-агенція: органічне зростання для бізнесу">
+<meta property="og:description" content="SEO-аудит, технічне SEO та комплексне просування. Прозора аналітика та вимірювані результати.">
+<meta property="og:image" content="images/og-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <header class="header">
     <div class="container header__inner">
         <a class="logo" href="#top"><span class="logo__mark"><svg width="16" height="16" viewBox="0 0 16 16"
