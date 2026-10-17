@@ -13,6 +13,7 @@ $components = [
     'case-grid'    => 'cases',
     'about'         => 'about',
     'reviews'       => 'reviews',
+    'blog-grid'     => 'blog',
 ];
 
 ?>

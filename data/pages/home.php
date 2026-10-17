@@ -308,4 +308,47 @@ return [
         ],
     ],
 
+    'blog' => [
+        'title' => 'Блог',
+        'lead' => 'Практичні матеріали про SEO, аналітику та розвиток сайтів.',
+
+        'items' => [
+            [
+                'category' => 'Технічне SEO',
+                'category_style' => 'lav',
+                'title' => 'Як перевірити індексацію сайту та знайти втрачені сторінки',
+                'date' => '12 жовтня 2026',
+                'reading_time' => '7 хв',
+                'icon' => '🔎',
+                'cover_style' => 'default',
+                'url' => '#',
+            ],
+            [
+                'category' => 'Аналітика',
+                'category_style' => 'lav',
+                'title' => 'Які метрики SEO справді важливі для бізнесу',
+                'date' => '28 вересня 2026',
+                'reading_time' => '5 хв',
+                'icon' => '📈',
+                'cover_style' => 'mint',
+                'url' => '#',
+            ],
+            [
+                'category' => 'Контент',
+                'category_style' => 'lav',
+                'title' => 'Структура сторінки категорії, яка добре ранжується',
+                'date' => '14 вересня 2026',
+                'reading_time' => '6 хв',
+                'icon' => '🧩',
+                'cover_style' => 'lav',
+                'url' => '#',
+            ],
+        ],
+
+        'more' => [
+            'label' => 'Усі статті',
+            'url' => '/blog/',
+        ],
+    ],
+
 ];
