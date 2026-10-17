@@ -13,6 +13,15 @@ get_template_part(
     ['hero' => $hero_data]
 );
 
+get_template_part(
+    'template-parts/components/benefits',
+    null,
+    [
+        'benefits' => $page_data['benefits'] ?? [],
+    ]
+);
+
+
 // Тут підключатимуться інші секції головної сторінки.
 
 get_footer();
