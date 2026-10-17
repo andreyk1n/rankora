@@ -5,23 +5,32 @@ $page_data = require get_template_directory() . '/data/pages/home.php';
 
 get_header();
 
-$hero_data = $page_data['hero'] ?? [];
+$components = [
+    'hero'        => 'hero',
+    'benefits'    => 'benefits',
+    'service-grid' => 'services',
+];
 
-get_template_part(
-    'template-parts/components/hero',
-    null,
-    ['hero' => $hero_data]
-);
+?>
 
-get_template_part(
-    'template-parts/components/benefits',
-    null,
-    [
-        'benefits' => $page_data['benefits'] ?? [],
-    ]
-);
+<main id="main-content" class="main">
 
+    <?php foreach ($components as $component => $data_key) : ?>
 
-// Тут підключатимуться інші секції головної сторінки.
+        <?php
+        get_template_part(
+            'template-parts/components/' . $component,
+            null,
+            [
+                $data_key => $page_data[$data_key] ?? [],
+            ]
+        );
+        ?>
 
-get_footer();
+    <?php endforeach; ?>
+
+    <!-- Тут підключатимуться інші секції головної сторінки. -->
+
+</main>
+
+<?php get_footer(); ?>
