@@ -14,6 +14,8 @@ $components = [
     'about'         => 'about',
     'reviews'       => 'reviews',
     'blog-grid'     => 'blog',
+    'faq'           => 'faq',
+    'contact' => 'contact',
 ];
 
 ?>
