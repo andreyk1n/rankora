@@ -219,7 +219,7 @@ if (have_posts()):
                             </a>
                         </div>
 
-                        <div class="grid grid--3">
+                        <div class="grid grid--2">
 
                             <?php while ($latest_posts->have_posts()): ?>
                                 <?php
