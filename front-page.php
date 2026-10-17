@@ -1,5 +1,5 @@
 
-<?php
+<?php /* Template Name: Home page */
 
 $page_data = require get_template_directory() . '/data/pages/home.php';
 

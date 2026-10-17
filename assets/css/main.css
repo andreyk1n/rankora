@@ -112,7 +112,9 @@ ul,ol{list-style:none;padding:0}
 
 .post{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s}
 .post:hover{transform:translateY(-4px)}
-.post__cover{height:160px;display:grid;place-items:center;font-size:44px;background:var(--sky)}
+.post__cover{width:100%;height:220px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f5f3fa}
+.post__image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.post__cover span{font-size:48px}
 .post__cover--lav{background:var(--lav)}
 .post__cover--mint{background:var(--mint)}
 .post__body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -169,3 +171,4 @@ ul,ol{list-style:none;padding:0}
 .nav__list{flex-direction:column;gap:16px}
 .grid--4,.grid--3,.process,.footer__grid{grid-template-columns:1fr}
 .hero__stats{gap:20px;flex-wrap:wrap}}
+
