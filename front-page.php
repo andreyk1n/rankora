@@ -12,6 +12,7 @@ $components = [
     'process-steps' => 'process',
     'case-grid'    => 'cases',
     'about'         => 'about',
+    'reviews'       => 'reviews',
 ];
 
 ?>
