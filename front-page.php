@@ -9,6 +9,7 @@ $components = [
     'hero'        => 'hero',
     'benefits'    => 'benefits',
     'service-grid' => 'services',
+    'process-steps' => 'process',
 ];
 
 ?>
