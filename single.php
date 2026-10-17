@@ -160,37 +160,34 @@ if (have_posts()):
                     $tags = get_the_tags();
                     ?>
 
-                    <div class="share">
+                    <?php $tags = get_the_tags(); ?>
 
-                        <?php if ($tags): ?>
-                            <div class="share__tags">
+                    <div class="share">
+                        <div class="share__tags">
+                            <?php if ($tags): ?>
                                 <?php foreach ($tags as $tag): ?>
                                     <a class="tag tag--sky" href="<?php echo esc_url(get_tag_link($tag->term_id)); ?>">
                                         <?php echo esc_html($tag->name); ?>
                                     </a>
                                 <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
 
                         <div class="share__links">
                             <span>Поділитись:</span>
 
-                            <a class="share__btn"
-                                href="<?php echo esc_url('https://www.linkedin.com/sharing/share-offsite/?url=' . rawurlencode($post_url)); ?>"
-                                target="_blank" rel="noopener noreferrer" aria-label="Поділитись у LinkedIn">in</a>
+                            <button class="share__btn" type="button" aria-label="Поділитись у LinkedIn"
+                                onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank', 'noopener,noreferrer')">in</button>
 
-                            <a class="share__btn"
-                                href="<?php echo esc_url('https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode($post_url)); ?>"
-                                target="_blank" rel="noopener noreferrer" aria-label="Поділитись у Facebook">fb</a>
+                            <button class="share__btn" type="button" aria-label="Поділитись у Facebook"
+                                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'noopener,noreferrer')">fb</button>
 
-                            <a class="share__btn"
-                                href="<?php echo esc_url('https://t.me/share/url?url=' . rawurlencode($post_url) . '&text=' . rawurlencode($post_title)); ?>"
-                                target="_blank" rel="noopener noreferrer" aria-label="Поділитись у Telegram">tg</a>
+                            <button class="share__btn" type="button" aria-label="Поділитись у Telegram"
+                                onclick="window.open('https://t.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'noopener,noreferrer')">tg</button>
 
-                            <button class="share__btn" type="button" id="copy-post-link"
-                                data-url="<?php echo esc_url($post_url); ?>" aria-label="Копіювати посилання">🔗</button>
+                            <button class="share__btn" type="button" id="copy" aria-label="Копіювати посилання"
+                                title="Копіювати посилання">🔗</button>
                         </div>
-
                     </div>
 
                 </div>
@@ -299,27 +296,17 @@ if (have_posts()):
         </main>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const copyButton = document.getElementById('copy-post-link');
+            document.getElementById('copy')?.addEventListener('click', async function () {
+                try {
+                    await navigator.clipboard.writeText(window.location.href);
+                    this.textContent = '✓';
 
-                if (!copyButton) {
-                    return;
+                    setTimeout(() => {
+                        this.textContent = '🔗';
+                    }, 1500);
+                } catch (error) {
+                    window.prompt('Скопіюй посилання на статтю:', window.location.href);
                 }
-
-                copyButton.addEventListener('click', async function () {
-                    const url = copyButton.dataset.url;
-
-                    try {
-                        await navigator.clipboard.writeText(url);
-                        copyButton.textContent = '✓';
-
-                        setTimeout(function () {
-                            copyButton.textContent = '🔗';
-                        }, 1500);
-                    } catch (error) {
-                        window.prompt('Скопіюйте посилання на статтю:', url);
-                    }
-                });
             });
         </script>
 
