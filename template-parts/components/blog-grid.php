@@ -1,20 +1,21 @@
-
 <?php
 
 $blog = $args['blog'] ?? [];
 
 $blog_query = new WP_Query([
-    'post_type'           => 'post',
-    'post_status'         => 'publish',
-    'posts_per_page'      => 3,
-    'orderby'             => 'date',
-    'order'               => 'DESC',
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC',
     'ignore_sticky_posts' => true,
 ]);
 
 if (!$blog_query->have_posts()) {
     return;
 }
+
+$emojis = ['📝', '🔎', '📈', '🧩', '💡'];
 
 ?>
 
@@ -41,15 +42,10 @@ if (!$blog_query->have_posts()) {
 
                 $categories = get_the_category();
                 $category = !empty($categories) ? $categories[0]->name : '';
-
                 $category_style = 'lav';
 
-                $cover_style = 'default';
                 $cover_class = 'post__cover';
-
-                if ($cover_style !== 'default') {
-                    $cover_class .= ' post__cover--' . $cover_style;
-                }
+                $random_emoji = $emojis[array_rand($emojis)];
                 ?>
 
                 <a class="card post" href="<?php the_permalink(); ?>">
@@ -58,13 +54,15 @@ if (!$blog_query->have_posts()) {
                         <?php if (has_post_thumbnail()): ?>
                             <?php
                             the_post_thumbnail('medium_large', [
-                                'class'   => 'post__image',
+                                'class' => 'post__image',
                                 'loading' => 'lazy',
-                                'alt'     => esc_attr(get_the_title()),
+                                'alt' => esc_attr(get_the_title()),
                             ]);
                             ?>
                         <?php else: ?>
-                            <span aria-hidden="true">📝</span>
+                            <span aria-hidden="true">
+                                <?php echo esc_html($random_emoji); ?>
+                            </span>
                         <?php endif; ?>
                     </div>
 
