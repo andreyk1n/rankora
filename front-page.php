@@ -11,6 +11,7 @@ $components = [
     'service-grid' => 'services',
     'process-steps' => 'process',
     'case-grid'    => 'cases',
+    'about'         => 'about',
 ];
 
 ?>
