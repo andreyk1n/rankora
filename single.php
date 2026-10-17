@@ -16,9 +16,16 @@ if (have_posts()):
             $author_initials .= mb_substr($word, 0, 1);
         }
 
-        $content = get_the_content();
-        $word_count = str_word_count(wp_strip_all_tags(strip_shortcodes($content)));
-        $reading_time = max(1, (int) ceil($word_count / 200));
+        $content = strip_shortcodes(get_the_content());
+        $content = wp_strip_all_tags($content);
+        $content = html_entity_decode($content, ENT_QUOTES, 'UTF-8');
+
+        preg_match_all('/[\p{L}\p{N}]+(?:[\'’\-][\p{L}\p{N}]+)*/u', $content, $matches);
+
+        $word_count = count($matches[0]);
+
+        // Середня швидкість читання українського тексту — приблизно 180 слів/хв.
+        $reading_time = max(1, (int) ceil($word_count / 180));
 
         $blog_url = home_url('/blog/');
         $post_url = get_permalink();
