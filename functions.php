@@ -1,4 +1,3 @@
-
 <?php
 
 function rankora_setup(): void
@@ -17,7 +16,7 @@ function rankora_setup(): void
 
     register_nav_menus([
         'primary' => __('Головна навігація', 'rankora'),
-        'footer'  => __('Меню футера', 'rankora'),
+        'footer' => __('Меню футера', 'rankora'),
     ]);
 }
 add_action('after_setup_theme', 'rankora_setup');
@@ -38,7 +37,7 @@ function rankora_enqueue_assets(): void
 
     // Stylesheets with automatic cache busting.
     $styles = [
-        'rankora-main'       => '/assets/css/main.css',
+        'rankora-main' => '/assets/css/main.css',
         'rankora-components' => '/assets/css/components.css',
         'rankora-responsive' => '/assets/css/responsive.css',
     ];
@@ -57,6 +56,21 @@ function rankora_enqueue_assets(): void
             );
 
             $dependencies[] = $handle;
+        }
+    }
+
+    // Single post stylesheet.
+    if (is_singular('post')) {
+        $single_path = '/assets/css/single.css';
+        $single_file = $theme_dir . $single_path;
+
+        if (file_exists($single_file)) {
+            wp_enqueue_style(
+                'rankora-single',
+                $theme_uri . $single_path,
+                $dependencies,
+                (string) filemtime($single_file)
+            );
         }
     }
 
