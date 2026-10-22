@@ -22,7 +22,7 @@ get_header();
       <p class="error__text">Можливо, адресу змінили, сторінку видалили або в посиланні є помилка. Скористайтесь пошуком або поверніться на головну.</p>
  
       <div class="error__actions">
-        <a class="btn btn--primary" href="/">← На головну</a>
+        <a class="btn btn--primary" href="<?php bloginfo( 'url' ); ?>">← На головну</a>
         <button class="btn btn--ghost" type="button" onclick="history.back()">Повернутись назад</button>
       </div>
  
