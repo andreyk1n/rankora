@@ -26,8 +26,8 @@ $emojis = ['📝', '🔎', '📈', '🧩', '💡'];
 <main>
     <section class="section" id="blog">
         <div class="container">
-            <div class="section__head" style="text-align: center;">
-                <h1 class="section__title">Блог</h1>
+            <div class="section__head section__head--blog" style="text-align: center;">
+                <h1 class="section__title section__title--blog">Блог</h1>
             </div>
 
             <?php if ($archive_query->have_posts()): ?>
