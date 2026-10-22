@@ -74,20 +74,12 @@ if (have_posts()):
                         <?php endif; ?>
 
                         <div class="meta">
-
-                            <span class="meta__author">
-                                <span class="meta__ava" aria-hidden="true">
-                                    <?php echo esc_html($author_initials); ?>
-                                </span>
-                                <?php echo esc_html($author_name); ?>
-                            </span>
-
                             <span class="meta__item">
                                 <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
                                     <?php echo esc_html(get_the_date('j F Y')); ?>
                                 </time>
                             </span>
-
+                            <span>/</span>
                             <span class="meta__item">
                                 <?php echo esc_html($reading_time); ?> хв читання
                             </span>
@@ -198,7 +190,7 @@ if (have_posts()):
             $latest_posts = new WP_Query([
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'posts_per_page' => 3,
+                'posts_per_page' => 2,
                 'post__not_in' => [get_the_ID()],
                 'orderby' => 'date',
                 'order' => 'DESC',
