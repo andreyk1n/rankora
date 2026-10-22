@@ -60,21 +60,38 @@ function rankora_enqueue_assets(): void
     }
 
     /*
- * Single post and archive stylesheet.
- */
-if (is_singular('post') || is_archive()) {
-    $single_path = '/assets/css/single.css';
-    $single_file = $theme_dir . $single_path;
+     * Single post and archive stylesheet.
+     */
+    if (is_singular('post') || is_archive()) {
+        $single_path = '/assets/css/single.css';
+        $single_file = $theme_dir . $single_path;
 
-    if (file_exists($single_file)) {
-        wp_enqueue_style(
-            'rankora-single',
-            $theme_uri . $single_path,
-            $dependencies,
-            (string) filemtime($single_file)
-        );
+        if (file_exists($single_file)) {
+            wp_enqueue_style(
+                'rankora-single',
+                $theme_uri . $single_path,
+                $dependencies,
+                (string) filemtime($single_file)
+            );
+        }
     }
-}
+
+    /*
+     * 404 page stylesheet.
+     */
+    if (is_404()) {
+        $not_found_path = '/assets/css/404.css';
+        $not_found_file = $theme_dir . $not_found_path;
+
+        if (file_exists($not_found_file)) {
+            wp_enqueue_style(
+                'rankora-404',
+                $theme_uri . $not_found_path,
+                $dependencies,
+                (string) filemtime($not_found_file)
+            );
+        }
+    }
 
     // Main JavaScript.
     $js_path = '/assets/js/main.js';

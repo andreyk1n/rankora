@@ -21,11 +21,6 @@ get_header();
       <h1 class="error__title">Цієї сторінки немає, але ваше зростання на місці</h1>
       <p class="error__text">Можливо, адресу змінили, сторінку видалили або в посиланні є помилка. Скористайтесь пошуком або поверніться на головну.</p>
  
-      <form class="search" role="search" action="#" onsubmit="return false">
-        <div class="search__field"><input class="search__input" type="search" placeholder="Пошук по сайту" aria-label="Пошук по сайту"></div>
-        <button class="btn btn--primary" type="submit">Шукати</button>
-      </form>
- 
       <div class="error__actions">
         <a class="btn btn--primary" href="/">← На головну</a>
         <button class="btn btn--ghost" type="button" onclick="history.back()">Повернутись назад</button>
