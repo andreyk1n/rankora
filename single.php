@@ -46,11 +46,11 @@ if (have_posts()):
                             <a class="crumbs__item" href="<?php echo esc_url(home_url('/')); ?>">
                                 Головна
                             </a>
-
+                            <span>/</span>
                             <a class="crumbs__item" href="<?php echo esc_url($blog_url); ?>">
                                 Блог
                             </a>
-
+                            <span>/</span>
                             <span class="crumbs__item crumbs__item--cur" aria-current="page">
                                 <?php echo esc_html($post_title); ?>
                             </span>
