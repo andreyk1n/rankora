@@ -232,5 +232,43 @@ return [
         ],
     ],
 
+    'contact' => [
+        'title' => 'Не знаєте, яка послуга потрібна?',
+        'text' => 'Залиште заявку — проведемо безкоштовний експрес-огляд і порадимо оптимальний формат співпраці.',
+        'button' => 'Надіслати заявку',
+        'note' => 'Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності.',
+        'fields' => [
+            [
+                'id' => 'f-name',
+                'name' => 'name',
+                'label' => "Ім'я",
+                'type' => 'text',
+                'placeholder' => 'Як до вас звертатись',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-email',
+                'name' => 'email',
+                'label' => 'Email',
+                'type' => 'email',
+                'placeholder' => 'name@company.com',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-site',
+                'name' => 'site',
+                'label' => 'Сайт',
+                'type' => 'url',
+                'placeholder' => 'https://',
+            ],
+            [
+                'id' => 'f-msg',
+                'name' => 'message',
+                'label' => 'Коротко про задачу',
+                'type' => 'textarea',
+                'placeholder' => 'Що хочете покращити?',
+            ],
+        ],
+    ],
 
 ];
