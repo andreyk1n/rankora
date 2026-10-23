@@ -11,6 +11,7 @@ $components = [
     'pick'        => 'pick',
     'compare'        => 'compare',
     'process'        => 'process',
+    'faq'        => 'faq',
 ];
 
 ?>
