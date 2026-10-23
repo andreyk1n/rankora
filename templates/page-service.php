@@ -10,6 +10,7 @@ $components = [
     'catalog'        => 'catalog',
     'pick'        => 'pick',
     'compare'        => 'compare',
+    'process'        => 'process',
 ];
 
 ?>
