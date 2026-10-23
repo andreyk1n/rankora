@@ -9,6 +9,7 @@ $components = [
     'hero'        => 'hero',
     'catalog'        => 'catalog',
     'pick'        => 'pick',
+    'compare'        => 'compare',
 ];
 
 ?>
