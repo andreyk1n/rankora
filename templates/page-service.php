@@ -7,6 +7,7 @@ get_header();
 
 $components = [
     'hero'        => 'hero',
+    'catalog'        => 'catalog',
 ];
 
 ?>
