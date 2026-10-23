@@ -67,11 +67,7 @@ svg{display:block;max-width:100%}
 
 
 
-.pick{display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh);transition:transform .25s}
-.pick:hover{transform:translateY(-4px)}
-.pick__q{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--acc)}
-.pick__title{font-size:19px;font-weight:800;line-height:1.3}
-.pick__go{margin-top:auto;padding-top:8px;font-weight:700;font-size:15px}
+
 
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:var(--sh)}
 .table{width:100%;min-width:720px;border-collapse:collapse;font-size:14.5px}
@@ -149,34 +145,6 @@ svg{display:block;max-width:100%}
 
 <main id="top">
 
-<section class="section" id="catalog">
-  <div class="container">
-    <div class="section__head"><h2 class="section__title">Усі послуги</h2><p class="section__lead">Оберіть напрям або скористайтесь фільтром.</p></div>
-    <div class="filter" id="filter" role="group" aria-label="Фільтр послуг">
-      <button class="chip chip--on" data-cat="all">Усі</button><button class="chip" data-cat="audit">Аудит</button><button class="chip" data-cat="tech">Технічні</button><button class="chip" data-cat="growth">Просування</button><button class="chip" data-cat="geo">Гео</button>
-    </div>
-    <div class="grid grid--3" id="list">
-      <article class="card service" data-cat="audit"><div class="service__top"><div class="card__icon">🔍</div><span class="tag tag--sky">Хіт</span></div><h3 class="card__title">SEO-аудит</h3><p class="card__text">Знаходимо технічні помилки, втрачений трафік і точки росту.</p><ul class="service__list"><li class="service__item">Технічний та контентний аналіз</li><li class="service__item">Аналіз конкурентів</li><li class="service__item">План пріоритетів на 6 місяців</li></ul><div class="service__foot"><div class="service__price">від<strong>$390</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-      <article class="card service" data-cat="tech"><div class="service__top"><div class="card__icon card__icon--lav">⚙️</div></div><h3 class="card__title">Технічне SEO</h3><p class="card__text">Робимо сайт швидким, зрозумілим для пошукових систем і стабільним.</p><ul class="service__list"><li class="service__item">Індексація та структура</li><li class="service__item">Core Web Vitals</li><li class="service__item">Мікророзмітка</li></ul><div class="service__foot"><div class="service__price">від<strong>$490</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-      <article class="card service" data-cat="growth"><div class="service__top"><div class="card__icon card__icon--mint">📈</div><span class="tag tag--lav">Популярне</span></div><h3 class="card__title">Комплексне просування</h3><p class="card__text">Стратегія, оптимізація, контент і лінкбілдинг під ваші цілі.</p><ul class="service__list"><li class="service__item">Семантичне ядро</li><li class="service__item">Щомісячні роботи</li><li class="service__item">Звіти по заявках</li></ul><div class="service__foot"><div class="service__price">від<strong>$990/міс</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-      <article class="card service" data-cat="growth"><div class="service__top"><div class="card__icon">📝</div></div><h3 class="card__title">Оптимізація контенту</h3><p class="card__text">Пишемо й оновлюємо сторінки, які відповідають на запит користувача.</p><ul class="service__list"><li class="service__item">Мета-теги та структура</li><li class="service__item">Тексти для категорій і статей</li><li class="service__item">Внутрішнє перелінкування</li></ul><div class="service__foot"><div class="service__price">від<strong>$350</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-      <article class="card service" data-cat="geo"><div class="service__top"><div class="card__icon card__icon--lav">📍</div></div><h3 class="card__title">Локальне SEO</h3><p class="card__text">Привертаємо клієнтів з міста та району, де ви надаєте послуги.</p><ul class="service__list"><li class="service__item">Google Business Profile</li><li class="service__item">Локальні сторінки</li><li class="service__item">Відгуки та цитування</li></ul><div class="service__foot"><div class="service__price">від<strong>$450</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-      <article class="card service" data-cat="geo"><div class="service__top"><div class="card__icon card__icon--mint">🌍</div></div><h3 class="card__title">Міжнародне SEO</h3><p class="card__text">Виходимо на нові ринки без дублів і втрати позицій.</p><ul class="service__list"><li class="service__item">Hreflang та структура</li><li class="service__item">Локалізація семантики</li><li class="service__item">Аналіз ринків</li></ul><div class="service__foot"><div class="service__price">від<strong>$1 200</strong></div><a class="service__link" href="#">Детальніше →</a></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section section--tint" id="pick">
-  <div class="container">
-    <div class="section__head"><h2 class="section__title">Яка послуга вам підійде</h2><p class="section__lead">Знайдіть свою ситуацію, і ми підкажемо, з чого почати.</p></div>
-    <div class="grid grid--4">
-      <a class="pick" href="#"><span class="pick__q">Трафік впав</span><h3 class="pick__title">Потрібно зрозуміти причину</h3><span class="pick__go">SEO-аудит →</span></a>
-      <a class="pick" href="#"><span class="pick__q">Новий сайт</span><h3 class="pick__title">Хочу запуститись без помилок</h3><span class="pick__go">Технічне SEO →</span></a>
-      <a class="pick" href="#"><span class="pick__q">Потрібен ріст</span><h3 class="pick__title">Хочу більше заявок з пошуку</h3><span class="pick__go">Комплексне просування →</span></a>
-      <a class="pick" href="#"><span class="pick__q">Нові ринки</span><h3 class="pick__title">Виходжу в інше місто чи країну</h3><span class="pick__go">Локальне та міжнародне SEO →</span></a>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="compare">
   <div class="container">
