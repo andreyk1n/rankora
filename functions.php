@@ -93,6 +93,23 @@ function rankora_enqueue_assets(): void
         }
     }
 
+
+    /** Contacts page stylesheet. */
+    if (is_page('contacts')) {
+        $contacts_path = '/assets/css/contacts.css';
+        $contacts_file = $theme_dir . $contacts_path;
+
+        if (file_exists($contacts_file)) {
+            wp_enqueue_style(
+                'rankora-contacts',
+                $theme_uri . $contacts_path,
+                $dependencies,
+                (string) filemtime($contacts_file)
+            );
+        }
+    }
+
+
     // Main JavaScript.
     $js_path = '/assets/js/main.js';
     $js_file = $theme_dir . $js_path;

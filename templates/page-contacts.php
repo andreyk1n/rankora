@@ -3,10 +3,10 @@
 
 $page_data = require get_template_directory() . '/data/pages/contacts.php';
 
-get_header();
+get_header(); 
 
 $components = [
-    'hero'        => 'hero',
+    'hero-contacts'        => 'hero',
 ];
 
 ?>
