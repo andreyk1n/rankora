@@ -93,7 +93,6 @@ function rankora_enqueue_assets(): void
         }
     }
 
-
     /** Contacts page stylesheet. */
     if (is_page('contacts')) {
         $contacts_path = '/assets/css/contacts.css';
@@ -109,6 +108,20 @@ function rankora_enqueue_assets(): void
         }
     }
 
+    /** Text stylesheet for privacy policy and terms pages. */
+    if (is_page(['privacy-policy', 'terms-of-use'])) {
+        $text_path = '/assets/css/text.css';
+        $text_file = $theme_dir . $text_path;
+
+        if (file_exists($text_file)) {
+            wp_enqueue_style(
+                'rankora-text',
+                $theme_uri . $text_path,
+                $dependencies,
+                (string) filemtime($text_file)
+            );
+        }
+    }
 
     // Main JavaScript.
     $js_path = '/assets/js/main.js';
