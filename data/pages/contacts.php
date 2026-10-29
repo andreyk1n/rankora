@@ -48,4 +48,36 @@ return [
     ],
 
 
+    'form' => [
+        'title' => 'Залишити заявку',
+        'text' => 'Заповніть форму, і ми підготуємо пропозицію під вашу задачу.',
+        'button' => 'Надіслати заявку',
+        'note' => 'Ми не передаємо ваші дані третім особам.',
+        'privacy_url' => '/privacy-policy/',
+        'topics' => ['SEO-аудит', 'Технічне SEO', 'Просування', 'Контент', 'Інше'],
+    ],
+    'contact' => [
+        'title' => 'Контактна інформація',
+        'items' => [
+            ['icon' => '🏢', 'label' => 'Адреса', 'value' => 'Львів, вул. Прикладна, 1, офіс 12'],
+            ['icon' => '✉️', 'label' => 'Email', 'value' => 'hello@rankora.com'],
+            ['icon' => '📞', 'label' => 'Телефон', 'value' => '+380 00 000 00 00'],
+        ],
+        'hours' => [
+            ['day' => 'Пн–Пт', 'time' => '9:00–18:00'],
+            ['day' => 'Субота', 'time' => 'за домовленістю', 'off' => true],
+            ['day' => 'Неділя', 'time' => 'вихідний', 'off' => true],
+        ],
+        'map_label' => 'Карта: офіс Rankora',
+        'map_title' => 'Rankora · Львів',
+        'socials' => [
+            ['label' => 'in LinkedIn', 'url' => '#'],
+            ['label' => 'fb Facebook', 'url' => '#'],
+            ['label' => 'tg Telegram', 'url' => '#'],
+            ['label' => 'ig Instagram', 'url' => '#'],
+        ],
+    ],
+
+    
+
 ];
