@@ -92,7 +92,7 @@ return [
         ],
         [
             'label' => 'Умови використання',
-            'url' => '/terms/',
+            'url' => '/terms-of-use/',
         ],
     ],
 
