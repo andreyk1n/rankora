@@ -1,4 +1,3 @@
-
 <?php
 /* Template Name: Contacts page */
 
@@ -17,11 +16,14 @@ $components = [
         'form' => $page_data['form'] ?? [],
         'contact' => $page_data['contact'] ?? [],
     ],
+    'faq' => [
+        'faq' => $page_data['faq'] ?? [],
+    ],
 ];
 ?>
 
 <main id="main-content" class="main">
-    <?php foreach ($components as $component => $args) : ?>
+    <?php foreach ($components as $component => $args): ?>
         <?php get_template_part('template-parts/components/' . $component, null, $args); ?>
     <?php endforeach; ?>
 </main>
