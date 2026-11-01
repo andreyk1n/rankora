@@ -6,10 +6,10 @@ get_header();
 
 $components = [
     'hero' => 'hero',
+        'results' => 'results',
     'featured-case' => 'featured',
     'cases-catalog' => 'catalog',
-    'results' => 'results',
-    'testimonial' => 'testimonial',
+    'reviews' => 'reviews',
     'contact' => 'contact',
 ];
 
