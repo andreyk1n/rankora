@@ -276,7 +276,8 @@ ul,ol{list-style:none;padding:0}
 .quote__role{font-size:14px;color:var(--muted)}
 
 @media(max-width:980px){
-.featured-case{grid-template-columns:1fr;gap:28px;padding:32px}
+.featured-case{grid-template-columns:1fr;gap:28px;padding:32px;}
+.quote{grid-template-columns:1fr;padding:28px 22px}
 }
 
 @media(max-width:760px){
