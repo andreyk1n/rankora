@@ -46,7 +46,6 @@ ul,ol{list-style:none;padding:0}
 .hero__stat-value{font-size:26px;line-height:1.2;font-weight:800;letter-spacing:-.03em}
 .hero__stat-label{margin-top:4px;font-size:13px;line-height:1.45;color:var(--muted)}
 
-
 .hero--services .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;border:0;}
 .hero--services .hero__stat{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--sh)}
 .hero--services .hero__stat--lav{background:linear-gradient(160deg,#fff,var(--lav))}
@@ -56,6 +55,14 @@ ul,ol{list-style:none;padding:0}
 .hero--services .hero__stat-label{font-size:14px;color:var(--muted)}
 .hero--services .hero__stat--dark .hero__stat-label{color:#b9bec8}
 
+.hero--cases .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;border:0;}
+.hero--cases .hero__stat{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--sh)}
+.hero--cases .hero__stat--lav{background:linear-gradient(160deg,#fff,var(--lav))}
+.hero--cases .hero__stat--mint{background:linear-gradient(160deg,#fff,var(--mint))}
+.hero--cases .hero__stat--dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hero--cases .hero__stat-value{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.hero--cases .hero__stat--dark .hero__stat-label{color:#b9bec8}
+.hero--cases .hero__stat-label{font-size:14px;color:var(--muted)}
 
 .chart{position:relative;background:#fff;border:1px solid var(--line);border-radius:32px;padding:26px;box-shadow:var(--shadow)}
 .chart__head{display:flex;justify-content:space-between;margin-bottom:10px}
