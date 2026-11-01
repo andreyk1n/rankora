@@ -264,6 +264,10 @@ ul,ol{list-style:none;padding:0}
 .case__works{display:grid;gap:4px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px}
 .case__work::before{content:"✓";margin-right:8px;color:var(--ok);font-weight:800}
 
+.kpi{padding:26px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh)}
+.kpi__value{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.kpi__label{margin-top:4px;font-size:14.5px;color:var(--muted)}
+
 .quote{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:40px;border-radius:32px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
 .quote__ava{width:84px;height:84px;border-radius:50%;background:var(--lav);display:grid;place-items:center;font-size:28px;font-weight:800}
 .quote__stars{color:#f5b301;letter-spacing:2px}
