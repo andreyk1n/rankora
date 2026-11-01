@@ -268,16 +268,8 @@ ul,ol{list-style:none;padding:0}
 .kpi__value{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
 .kpi__label{margin-top:4px;font-size:14.5px;color:var(--muted)}
 
-.quote{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:40px;border-radius:32px;background:#fff;border:1px solid var(--line);box-shadow:var(--sh)}
-.quote__ava{width:84px;height:84px;border-radius:50%;background:var(--lav);display:grid;place-items:center;font-size:28px;font-weight:800}
-.quote__stars{color:#f5b301;letter-spacing:2px}
-.quote__text{margin:8px 0 14px;font-size:21px;font-weight:700;line-height:1.45;letter-spacing:-.01em}
-.quote__name{font-weight:700}
-.quote__role{font-size:14px;color:var(--muted)}
-
 @media(max-width:980px){
 .featured-case{grid-template-columns:1fr;gap:28px;padding:32px;}
-.quote{grid-template-columns:1fr;padding:28px 22px}
 }
 
 @media(max-width:760px){

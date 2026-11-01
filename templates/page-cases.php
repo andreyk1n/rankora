@@ -10,6 +10,7 @@ $components = [
     'cases-catalog' => 'catalog',
     'results' => 'results',
     'testimonial' => 'testimonial',
+    'contact' => 'contact',
 ];
 
 ?>
