@@ -1,12 +1,13 @@
-
-<?php /* Template Name: Services page */
+<?php /* Template Name: Cases page */
 
 $page_data = require get_template_directory() . '/data/pages/cases.php';
 
 get_header();
 
 $components = [
-    'hero'        => 'hero',
+    'hero'           => 'hero',
+    'featured-case'  => 'featured',
+    'cases-catalog'  => 'catalog',
 ];
 
 ?>
