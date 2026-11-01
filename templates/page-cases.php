@@ -8,6 +8,7 @@ $components = [
     'hero'           => 'hero',
     'featured-case'  => 'featured',
     'cases-catalog'  => 'catalog',
+    'testimonial'  => 'testimonial',
 ];
 
 ?>
