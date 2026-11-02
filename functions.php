@@ -140,3 +140,5 @@ function rankora_enqueue_assets(): void
 add_action('wp_enqueue_scripts', 'rankora_enqueue_assets');
 
 require_once get_template_directory() . '/inc/data-loader.php';
+
+require_once get_template_directory() . '/inc/seo.php';
