@@ -131,7 +131,7 @@ ul,ol{list-style:none;padding:0}
 .quote__role{font-size:13px;color:var(--muted)}
 
 .post{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s}
-.post:hover{transform:translateY(-4px)}
+.card.post:hover{transform:translateY(-4px)}
 .post__cover{width:100%;height:220px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#f5f3fa}
 .post__image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .post__cover span{font-size:48px}
