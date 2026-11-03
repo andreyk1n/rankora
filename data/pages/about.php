@@ -157,4 +157,56 @@ return [
             ],
         ],
     ],
+
+    'contact' => [
+        'title' => 'Давайте познайомимось',
+        'text' => 'Розкажіть про ваш сайт і цілі. Ми проведемо безкоштовний експрес-огляд і запропонуємо план наступних кроків.',
+
+        'fields' => [
+            [
+                'id' => 'f-name',
+                'name' => 'name',
+                'label' => "Ім'я *",
+                'type' => 'text',
+                'placeholder' => 'Як до вас звертатись',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-email',
+                'name' => 'email',
+                'label' => 'Email *',
+                'type' => 'email',
+                'placeholder' => 'name@company.com',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-site',
+                'name' => 'site',
+                'label' => 'Сайт',
+                'type' => 'url',
+                'placeholder' => 'https://',
+                'required' => false,
+            ],
+            [
+                'id' => 'f-phone',
+                'name' => 'phone',
+                'label' => 'Телефон',
+                'type' => 'tel',
+                'placeholder' => '+380 00 000 00 00',
+                'required' => false,
+            ],
+            [
+                'id' => 'f-msg',
+                'name' => 'message',
+                'label' => 'Коротко про задачу',
+                'type' => 'textarea',
+                'placeholder' => 'Що хочете покращити?',
+                'required' => false,
+                'full' => true,
+            ],
+        ],
+
+        'button' => 'Надіслати заявку',
+        'note' => 'Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності.',
+    ],
 ];

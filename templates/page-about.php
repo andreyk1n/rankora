@@ -10,6 +10,7 @@ $components = [
     'mission' => 'mission',
     'principles' => 'principles',
     'team' => 'team',
+    'contact' => 'contact',
 ];
 
 ?>
