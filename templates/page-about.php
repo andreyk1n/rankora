@@ -9,6 +9,7 @@ $components = [
     'hero' => 'hero',
     'mission' => 'mission',
     'principles' => 'principles',
+    'team' => 'team',
 ];
 
 ?>
