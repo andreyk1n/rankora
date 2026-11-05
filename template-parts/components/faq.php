@@ -8,7 +8,7 @@ if (empty($faq['items']) || !is_array($faq['items'])) {
 
 ?>
 
-<section class="section section--tint" id="faq">
+<section class="section <?php echo !empty($faq['tint']) ? 'section--tint' : ''; ?>" id="faq">
     <div class="container">
 
         <div class="section__head">
