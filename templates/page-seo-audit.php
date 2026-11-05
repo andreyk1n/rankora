@@ -1,4 +1,4 @@
-<?php /* Template Name: SEO Audit */
+<?php /* Template Name: SEO Audit service */
 
 $page_data = require get_template_directory() . '/data/pages/seo-audit.php';
 

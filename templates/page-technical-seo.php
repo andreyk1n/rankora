@@ -1,4 +1,4 @@
-<?php /* Template Name: Technical SEO */
+<?php /* Template Name: Technical SEO service */
 
 $page_data = require get_template_directory() . '/data/pages/technical-seo.php';
 
