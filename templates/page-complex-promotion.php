@@ -1,6 +1,6 @@
 <?php /* Template Name: Complex promotion service */
 
-$page_data = require get_template_directory() . '/data/pages/seo-audit.php';
+$page_data = require get_template_directory() . '/data/pages/complex-promotion.php';
 
 get_header();
 
