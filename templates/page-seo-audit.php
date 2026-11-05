@@ -6,6 +6,7 @@ get_header();
 
 $components = [
     'hero' => 'hero',
+    'service-included' => 'included'
 ];
 
 ?>
