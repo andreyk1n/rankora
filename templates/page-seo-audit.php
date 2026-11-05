@@ -9,6 +9,7 @@ $components = [
     'service-included' => 'included',
     'service-process' => 'process',
     'faq' => 'faq',
+    'contact' => 'contact',
 ];
 
 ?>

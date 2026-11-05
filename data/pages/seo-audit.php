@@ -119,4 +119,52 @@ return [
             ],
         ],
     ],
+
+    'contact' => [
+        'title' => 'Замовте SEO-аудит',
+        'text' => 'Залиште заявку — уточнимо деталі й назвемо точну вартість протягом робочого дня.',
+        'fields' => [
+            [
+                'id' => 'f-name',
+                'name' => 'name',
+                'label' => "Ім'я *",
+                'type' => 'text',
+                'placeholder' => 'Як до вас звертатись',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-email',
+                'name' => 'email',
+                'label' => 'Email *',
+                'type' => 'email',
+                'placeholder' => 'name@company.com',
+                'required' => true,
+            ],
+            [
+                'id' => 'f-site',
+                'name' => 'site',
+                'label' => 'Сайт',
+                'type' => 'url',
+                'placeholder' => 'https://',
+            ],
+            [
+                'id' => 'f-phone',
+                'name' => 'phone',
+                'label' => 'Телефон',
+                'type' => 'tel',
+                'placeholder' => '+380 00 000 00 00',
+            ],
+            [
+                'id' => 'f-msg',
+                'name' => 'message',
+                'label' => 'Коротко про задачу',
+                'type' => 'textarea',
+                'placeholder' => 'Що турбує зараз?',
+                'full' => true,
+            ],
+        ],
+        'service' => 'SEO-аудит',
+        'button' => 'Надіслати заявку',
+        'note' => 'Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності.',
+    ],
 ];
