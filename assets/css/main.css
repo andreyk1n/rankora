@@ -303,6 +303,24 @@ ul,ol{list-style:none;padding:0}
 .kpi__value{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
 .kpi__label{margin-top:4px;font-size:14.5px;color:var(--muted)}
 
+.page-template-page-seo-audit .hero__inner,
+.page-template-page-technical-seo .hero__inner,
+.page-template-page-complex-promotion .hero__inner,
+.page-template-page-content-optimization .hero__inner,
+.page-template-page-local-seo .hero__inner,
+.page-template-page-international-seo .hero__inner {
+    grid-template-columns: 2fr 1fr;
+}
+
+.page-template-page-seo-audit .hero__title,
+.page-template-page-technical-seo .hero__title,
+.page-template-page-complex-promotion .hero__title,
+.page-template-page-content-optimization .hero__title,
+.page-template-page-local-seo .hero__title,
+.page-template-page-international-seo .hero__title {
+    max-width: 100%;
+}
+
 @media(max-width:980px){
 .featured-case{grid-template-columns:1fr;gap:28px;padding:32px;}
 }
