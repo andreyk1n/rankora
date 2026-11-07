@@ -95,7 +95,7 @@ return [
                     'План пріоритетів на 6 місяців',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/seo-audit/',
+                'url' => '/seo-audit/',
             ],
             [
                 'title' => 'Технічне SEO',
@@ -106,7 +106,7 @@ return [
                     'Мікророзмітка',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/technical-seo/',
+                'url' => '/technical-seo/',
             ],
             [
                 'title' => 'Комплексне просування',
@@ -117,7 +117,7 @@ return [
                     'Звіти по заявках',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/seo-promotion/',
+                'url' => '/complex-promotion/',
             ],
             [
                 'title' => 'Оптимізація контенту',
@@ -128,7 +128,7 @@ return [
                     'Внутрішнє перелінкування',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/content-optimization/',
+                'url' => '/content-optimization/',
             ],
             [
                 'title' => 'Локальне SEO',
@@ -139,7 +139,7 @@ return [
                     'Відгуки та цитування',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/local-seo/',
+                'url' => '/local-seo/',
             ],
             [
                 'title' => 'Міжнародне SEO',
@@ -150,7 +150,7 @@ return [
                     'Аналіз ринків',
                 ],
                 'link_label' => 'Дізнатись більше',
-                'url' => '/services/international-seo/',
+                'url' => '/international-seo/',
             ],
         ],
     ],

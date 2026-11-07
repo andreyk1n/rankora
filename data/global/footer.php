@@ -53,23 +53,23 @@ return [
     'services' => [
         [
             'label' => 'SEO-аудит',
-            'url' => '/services/seo-audit/',
+            'url' => '/seo-audit/',
         ],
         [
             'label' => 'Технічне SEO',
-            'url' => '/services/technical-seo/',
+            'url' => '/technical-seo/',
         ],
         [
             'label' => 'Комплексне просування',
-            'url' => '/services/seo-promotion/',
+            'url' => '/complex-promotion/',
         ],
         [
             'label' => 'Оптимізація контенту',
-            'url' => '/services/content-optimization/',
+            'url' => '/content-optimization/',
         ],
         [
             'label' => 'Локальне та міжнародне SEO',
-            'url' => '/services/international-seo/',
+            'url' => '/international-seo/',
         ],
     ],
 
